@@ -133,6 +133,11 @@ video {
   left: 20px;
 }
 
+#top #top-logo img {
+  width: 25px;
+  max-width: 100%;
+}
+
 #top .top-share {
   display: flex;
   align-items: center;
