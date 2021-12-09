@@ -124,6 +124,15 @@ video {
   margin-right: auto;
 }
 
+#top #top-logo {
+  width: 25px;
+  height: 21px;
+  font-size: 0;
+  position: absolute;
+  top: 9px;
+  left: 20px;
+}
+
 #top .top-share {
   display: flex;
   align-items: center;
@@ -157,6 +166,16 @@ video {
 
 .share-icons a:hover {
   background: #000;
+}
+
+@media screen and (max-width: 768px) {
+  
+  #top #top-logo {
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
 }
 
 /*** LOWER ***/
