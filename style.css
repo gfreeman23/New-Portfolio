@@ -305,6 +305,11 @@ i {
   display: flex;
 }
 
+.open-modal:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
 .modal {
   text-align: center;
   position: absolute;
@@ -371,6 +376,11 @@ i {
 
 .close-modal i {
   font-weight: 500;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 @media screen and (min-width: 769px) {
