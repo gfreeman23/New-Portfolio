@@ -72,20 +72,23 @@ $("#top span").click(function() {
 
 // MODALS
 $(".open-modal").click(function() {
+  $("#modal-bg").addClass("active");
   $(this).next(".modal").toggle();
   if($(".modal").is(":visible")) {
     $(".close-modal").fadeIn();
-    $(".video-bg").click(".modal").fadeOut();
+    $("#modal-bg").click(".modal").fadeOut();
   }
 });
 
 $(".close-modal").click(function() {
   $(this).fadeOut();
-  $(".modal").fadeOut();
+  $(".modal, #modal-bg").fadeOut();
+  $("#modal-bg").removeClass("active");
 });
 
-$(".video-bg").click(function() {
-  $(".modal, .close-modal").fadeOut();
+$("#modal-bg").click(function() {
+  $(this).removeClass("active");
+  $(".modal, .close-modal, #modal-bg").fadeOut();
 });
 
 // SIDEBAR
