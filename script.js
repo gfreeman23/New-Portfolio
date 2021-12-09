@@ -68,7 +68,6 @@ $("#top span").click(function() {
   } else {
     $(this).html("<i class='fas fa-bars'></i>");
   }
-  
 });
 
 // MODALS
@@ -90,10 +89,10 @@ $(".video-bg").click(function() {
 });
 
 // SIDEBAR
-$("#sidebar a, .prev-next a").on("click", function() {
-    var activeLink = $(".sidebar-active");
-    activeLink.removeClass("sidebar-active"); 
-    $(this).addClass("sidebar-active");
+$("#top-logo a, #sidebar a, .prev-next a").on("click", function() {
+  var activeLink = $(".sidebar-active");
+  activeLink.removeClass("sidebar-active"); 
+  $(this).addClass("sidebar-active");
 });
 
 // SHARE ICONS
