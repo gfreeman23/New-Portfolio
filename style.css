@@ -265,7 +265,7 @@ i {
   overflow: auto;
 }
 
-body.active #content {
+body.active-body #content {
   overflow-y: hidden;
 }
 
