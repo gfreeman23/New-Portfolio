@@ -265,6 +265,10 @@ i {
   overflow: auto;
 }
 
+body.active #content {
+  overflow-y: hidden;
+}
+
 /*** PREV/NEXT ***/
 
 .prev-next {
@@ -324,25 +328,6 @@ i {
   column-gap: 20px;
 }
 
-#modal-bg {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  position: fixed;
-  z-index: 1;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  opacity: .80;
-}
-
-#modal-bg.active {
-  display: block !important;
-}
-
 .column {
   font-size: 0;
   display: flex;
@@ -375,6 +360,9 @@ i {
   overflow: auto;
   border: 1px solid #ccc;
   border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 75%);
 }
 
 .modal img {
