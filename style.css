@@ -166,6 +166,24 @@ video {
   right: 0;
 }
 
+#top-color-switch span:hover {
+  cursor: pointer;
+  -webkit-animation: bubble .25s linear;
+  animation: bubble .25s linear;  
+}
+
+@-webkit-keyframes bubble {
+  0% {width: 16px; height: 16px;}
+  50% {width: 20px; height: 20px; top: -2px; right: -2px;}
+  100% {width: 16px; height: 16px;}
+}
+
+@keyframes bubble {
+  0% {width: 16px; height: 16px;}
+  50% {width: 20px; height: 20px; top: -2px; right: -2px;}
+  100% {width: 16px; height: 16px;}
+}
+
 .pink-mode #sidebar span,
 .pink-mode #sidebar a:hover,
 .pink-mode #sidebar a.sidebar-active,
