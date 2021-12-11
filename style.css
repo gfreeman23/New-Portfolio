@@ -10,13 +10,13 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  
+
   html,
   body {
     font-size: 17px;
     line-height: 33px;
   }
-  
+
 }
 
 * {
@@ -62,7 +62,7 @@ video {
   display: block;
   animation: fade 300ms linear 1;
 }
-  
+
 .app > *:target ~ * {
   display: none;
 }
@@ -107,6 +107,7 @@ video {
 
 #top {
   width: 100%;
+  height: 40px;
   color: #ccc;
   font-size: 18px;
   text-align: right;
@@ -118,13 +119,13 @@ video {
   border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-#top span {
+#top-menu {
   font-size: 22px;
   line-height: 20px;
   margin-right: auto;
 }
 
-#top #top-logo {
+#top-logo {
   width: 25px;
   height: 21px;
   font-size: 0;
@@ -133,54 +134,56 @@ video {
   left: 20px;
 }
 
-#top #top-logo img {
+#top-logo img {
   width: 25px;
   max-width: 100%;
 }
 
-#top .top-share {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.top-share:hover .share-icons {
-  display: block;
-}
-
-.share-icons {
+#top-color-switch {
+  width: 40px;
+  height: 16px;
   position: absolute;
-  right: 45px;
-  padding: 5px 10px;
-  display: none;
+  top: 12px;
+  right: 20px;
 }
 
-.share-icons a {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(62deg, #009FFF 5%, #ec2F4B) fixed;
-  color: #fff;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: center;
-  text-decoration: none;
+#top-color-switch span {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  content: "";
   display: inline-block;
-  border-radius: 15px;
-  margin: 0 5px 0 0;
+  border-radius: 50%;  
 }
 
-.share-icons a:hover {
-  background: #000;
+#top-color-switch span.blue {
+  background: #00b7eb;
+  left: 0;
 }
+
+#top-color-switch span.pink {
+  background: pink;
+  right: 0;
+}
+
+.pink-mode #sidebar span,
+.pink-mode #sidebar a:hover,
+.pink-mode #sidebar a.sidebar-active,
+.pink-mode .heading:before,
+.pink-mode .prev-next a:hover,
+.pink-mode .prev-next i {
+  color: pink;
+}
+
 
 @media screen and (max-width: 768px) {
-  
-  #top #top-logo {
+
+  #top-logo {
     top: 11px;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
 }
 
 /*** LOWER ***/
@@ -209,21 +212,21 @@ video {
 }
 
 #sidebar span {
-  color: pink;
+  color: #00b7eb;
   position: relative;
 }
 
 #sidebar a:hover,
 #sidebar a.sidebar-active {
   background: rgba(0, 0, 0, .5);
-  color: pink;
+  color: #00b7eb;
   border-radius: 10px;
 }
 
 .heading:before {
   width: 20px;
   height: 20px;
-  color: pink;
+  color: #00b7eb;
   text-align: center;
   line-height: 20px;
   position: absolute;
@@ -278,7 +281,7 @@ body.active-body #content {
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, .1);  
+  border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
 .prev-next a {
@@ -287,11 +290,11 @@ body.active-body #content {
 }
 
 .prev-next a:hover {
-  color: pink;
+  color: #00b7eb;
 }
 
 .prev-next i {
-  color: pink;
+  color: #00b7eb;
 }
 
 .prev,
@@ -384,14 +387,14 @@ body.active-body #content {
 }
 
 .modal a {
-  color: pink;
+  color: #00b7eb;
   font-weight: 500;
 }
 
 .close-modal {
   width: 30px;
   height: 30px;
-  background: pink;
+  background: #00b7eb;
   color: #fff;
   font-size: 15px;
   text-align: center;
@@ -415,46 +418,46 @@ body.active-body #content {
 }
 
 @media screen and (min-width: 769px) {
-  
-  #top span {
+
+  #top #top-menu {
     display: none;
   }
-  
+
   #sidebar {
     display: block !important;
   }
-  
+
 }
 
 @media screen and (max-width: 768px) {
-  
+
   #sidebar {
-    max-width: 140px;    
+    max-width: 140px;
     font-size: 14px;
     display: none;
   }
-  
+
   #content {
     width: 100%;
   }
-  
+
   #content.active {
     width: calc(100% - 170px);
     font-size: calc(4px + 1vw);
     line-height: calc(12px + 1vw);
     transition: .3s;
   }
-  
+
   #content.active h1,
   #content.active h2 {
     font-size: calc(6px + 1vw);
-    line-height: calc(10px + 1vw);  
+    line-height: calc(10px + 1vw);
   }
-  
+
   .row {
     grid: auto auto / auto auto;
   }
-  
+
 }
 
 .project-image {
@@ -563,7 +566,7 @@ input#mc-embedded-subscribe {
 }
 
 #mc_embed_signup_scroll input[type="submit"]:hover {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .indicates-required {

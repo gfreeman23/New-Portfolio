@@ -18,7 +18,7 @@
           console.log('view currently showing is "Portfolio"');
           app.preventScroll();
         }
-      },      
+      },
       'contact': {
         'rendered': function() {
           console.log('view currently showing is "Contact"');
@@ -59,10 +59,10 @@ $(".heading").click(function() {
   $(this).next(".group").slideToggle(300);
 });
 
-$("#top span").click(function() {
+$("#top #top-menu").click(function() {
   $(this).toggleClass("active");
   $("#sidebar").toggle("slide");
-  $("#content").toggleClass("active");  
+  $("#content").toggleClass("active");
   if($("#top .active").is(":visible")) {
     $(this).html("<i class='fas fa-times'></i>");
   } else {
@@ -94,16 +94,25 @@ $(".video-bg, .active-body #container").click(function() {
 // SIDEBAR
 $("#top-logo a, #sidebar a, .prev-next a").on("click", function() {
   var activeLink = $(".sidebar-active");
-  activeLink.removeClass("sidebar-active"); 
+  activeLink.removeClass("sidebar-active");
   $(this).addClass("sidebar-active");
 });
 
-// SHARE ICONS
-var shareURL = $(location).attr("href");
+// COLOR CHANGER
+$("span.pink").click(function() {
+  $("body").toggleClass("pink-mode");
+  if($("body.pink-mode").is(":visible")) {
+    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo-pink.png' alt='GFree Logo'>");
+  } else {
+    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo.png' alt='GFree Logo'>");
+  }
+});
 
-$("a.social-share-twitter").attr("href", "https://twitter.com/intent/tweet?text=Check Out This Awesome Site!&amp;url=" + shareURL + "&amp;via=socialshare");
-$("a.social-share-facebook").attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareURL);
-$("a.social-share-linkedin").attr("href", "https://www.linkedin.com/shareArticle?mini=true&url=" + shareURL + "&amp;title=Check Out This Awesome Site!");                         
-$("a.social-share-pinterest").attr("href", "https://pinterest.com/pin/create/button/?url=" + shareURL + "&amp;description=Check Out This Awesome Site!");                                    
-
-$(".share-icons a").attr("onclick", "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600'); return false;").attr("target", "_blank");
+$("span.blue").click(function() {
+  $("body").removeClass("pink-mode");
+  if($("body.pink-mode").is(":visible")) {
+    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo-pink.png' alt='GFree Logo'>");
+  } else {
+    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo.png' alt='GFree Logo'>");
+  }
+});
