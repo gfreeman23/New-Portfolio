@@ -314,6 +314,7 @@ body.active-body #content {
 
 #about img {
   width: 100%;
+  height: auto;
 }
 
 /*** PORTFOLIO ***/

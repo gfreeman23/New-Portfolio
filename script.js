@@ -102,17 +102,17 @@ $("#top-logo a, #sidebar a, .prev-next a").on("click", function() {
 $("span.pink").click(function() {
   $("body").toggleClass("pink-mode");
   if($("body.pink-mode").is(":visible")) {
-    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo-pink.png' alt='GFree Logo'>");
+    $("#top-logo img").attr("src", "https://gregfreeman.me/img/logo-pink.png");
   } else {
-    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo.png' alt='GFree Logo'>");
+    $("#top-logo img").attr("src", "https://gregfreeman.me/img/logo.png");
   }
 });
 
 $("span.blue").click(function() {
   $("body").removeClass("pink-mode");
   if($("body.pink-mode").is(":visible")) {
-    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo-pink.png' alt='GFree Logo'>");
+    $("#top-logo img").attr("src", "https://gregfreeman.me/img/logo-pink.png");
   } else {
-    $("#top-logo a").html("<img src='https://gregfreeman.me/img/logo.png' alt='GFree Logo'>");
+    $("#top-logo img").attr("src", "https://gregfreeman.me/img/logo.png");
   }
 });
