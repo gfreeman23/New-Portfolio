@@ -175,6 +175,10 @@ video {
   color: pink;
 }
 
+.pink-mode .close-modal {
+  background: pink;
+}
+
 
 @media screen and (max-width: 768px) {
 
